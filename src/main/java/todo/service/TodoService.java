@@ -1,17 +1,18 @@
-package service;
+package todo.service;
 
 import java.util.List;
 
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import entity.Todo;
-import repository.TodoRepository;
+import todo.entity.Todo;
+import todo.repository.TodoRepository;
 
 @Service
 public class TodoService {
+	
 	private TodoRepository todoRepository;
-
+	
 	public TodoService(TodoRepository todoRepository) {
 		this.todoRepository = todoRepository;
 	}

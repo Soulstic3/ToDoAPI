@@ -1,4 +1,4 @@
-package controller;
+package todo.controller;
 
 import java.util.List;
 
@@ -11,19 +11,19 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import entity.Todo;
-import service.TodoService;
+import todo.entity.Todo;
+import todo.service.TodoService;
 
 @RestController
-@RequestMapping("/todos")
+@RequestMapping("/teste")
 public class TodoController {
 	private TodoService todoService;
 	
 	public TodoController(TodoService todoService) {
-		this.todoService = todoService;
+		this.todoService = todoService; 
 	}
 
-	@PostMapping 
+	@PostMapping
 	List<Todo> create(@RequestBody Todo todo){
 		return todoService.create(todo);
 	}
